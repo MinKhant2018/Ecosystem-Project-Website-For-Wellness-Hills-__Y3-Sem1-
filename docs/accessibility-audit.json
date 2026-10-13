@@ -1,0 +1,289 @@
+{
+  "tool": "axe-core",
+  "version": "4.14.0",
+  "auditedAt": "2026-10-12T22:24:08.832Z",
+  "environment": {
+    "url": "http://127.0.0.1:5173/",
+    "viewportHeight": 900,
+    "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36"
+  },
+  "ruleTags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21aa",
+    "best-practice"
+  ],
+  "scope": "Single Promotions page, all partner images loaded; default and prefers-contrast: more rendering.",
+  "limitations": [
+    "An automated audit does not establish complete WCAG conformance.",
+    "The default rendering preserves gold and muted colors from the supplied design; the reported contrast failures remain in that rendering.",
+    "The hero gradient requires manual contrast review because axe cannot determine its background colors."
+  ],
+  "manualChecks": {
+    "mode": "prefers-contrast: more",
+    "heroGradientBrightestStop": "#324e3a",
+    "methodology": "WCAG relative-luminance contrast formula, using the brightest declared gradient stop as the conservative background; darker stops increase contrast.",
+    "results": [
+      {
+        "selector": ".eyebrow",
+        "foreground": "#dfbb7a",
+        "minimumContrast": 5.04,
+        "requiredContrast": 4.5,
+        "passed": true
+      },
+      {
+        "selector": ".hero h1",
+        "foreground": "#f8f6f2",
+        "minimumContrast": 8.51,
+        "requiredContrast": 3,
+        "passed": true
+      },
+      {
+        "selector": ".hero-description",
+        "foreground": "#cccfc8",
+        "minimumContrast": 5.83,
+        "requiredContrast": 4.5,
+        "passed": true
+      }
+    ]
+  },
+  "results": [
+    {
+      "viewportWidth": 1480,
+      "contrastPreference": "no-preference",
+      "passingRuleCount": 37,
+      "failedRules": [
+        {
+          "rule": "color-contrast",
+          "impact": "serious",
+          "affectedElementCount": 12
+        }
+      ],
+      "requiresManualReview": [
+        {
+          "rule": "color-contrast",
+          "selectors": [
+            ".eyebrow",
+            "#page-title",
+            ".hero-description"
+          ]
+        }
+      ]
+    },
+    {
+      "viewportWidth": 1024,
+      "contrastPreference": "no-preference",
+      "passingRuleCount": 37,
+      "failedRules": [
+        {
+          "rule": "color-contrast",
+          "impact": "serious",
+          "affectedElementCount": 12
+        }
+      ],
+      "requiresManualReview": [
+        {
+          "rule": "color-contrast",
+          "selectors": [
+            ".eyebrow",
+            "#page-title",
+            ".hero-description"
+          ]
+        }
+      ]
+    },
+    {
+      "viewportWidth": 390,
+      "contrastPreference": "no-preference",
+      "passingRuleCount": 37,
+      "failedRules": [
+        {
+          "rule": "color-contrast",
+          "impact": "serious",
+          "affectedElementCount": 12
+        }
+      ],
+      "requiresManualReview": [
+        {
+          "rule": "color-contrast",
+          "selectors": [
+            ".eyebrow",
+            "#page-title",
+            ".hero-description"
+          ]
+        }
+      ]
+    },
+    {
+      "viewportWidth": 320,
+      "contrastPreference": "no-preference",
+      "passingRuleCount": 37,
+      "failedRules": [
+        {
+          "rule": "color-contrast",
+          "impact": "serious",
+          "affectedElementCount": 12
+        }
+      ],
+      "requiresManualReview": [
+        {
+          "rule": "color-contrast",
+          "selectors": [
+            ".eyebrow",
+            "#page-title",
+            ".hero-description"
+          ]
+        }
+      ]
+    },
+    {
+      "viewportWidth": 1480,
+      "contrastPreference": "more",
+      "passingRuleCount": 37,
+      "failedRules": [],
+      "requiresManualReview": [
+        {
+          "rule": "color-contrast",
+          "selectors": [
+            ".eyebrow",
+            "#page-title",
+            ".hero-description"
+          ]
+        }
+      ]
+    },
+    {
+      "viewportWidth": 1024,
+      "contrastPreference": "more",
+      "passingRuleCount": 37,
+      "failedRules": [],
+      "requiresManualReview": [
+        {
+          "rule": "color-contrast",
+          "selectors": [
+            ".eyebrow",
+            "#page-title",
+            ".hero-description"
+          ]
+        }
+      ]
+    },
+    {
+      "viewportWidth": 390,
+      "contrastPreference": "more",
+      "passingRuleCount": 37,
+      "failedRules": [],
+      "requiresManualReview": [
+        {
+          "rule": "color-contrast",
+          "selectors": [
+            ".eyebrow",
+            "#page-title",
+            ".hero-description"
+          ]
+        }
+      ]
+    },
+    {
+      "viewportWidth": 320,
+      "contrastPreference": "more",
+      "passingRuleCount": 37,
+      "failedRules": [],
+      "requiresManualReview": [
+        {
+          "rule": "color-contrast",
+          "selectors": [
+            ".eyebrow",
+            "#page-title",
+            ".hero-description"
+          ]
+        }
+      ]
+    }
+  ],
+  "representativeDefaultFindings": {
+    "viewportWidth": 1480,
+    "violations": [
+      {
+        "rule": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "reference": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+        "affectedElements": [
+          {
+            "selectors": [
+              ".language"
+            ],
+            "failure": "Fix any of the following:\n  Element has insufficient color contrast of 2.74 (foreground color: #b48e27, background color: #f5f2ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "selectors": [
+              "small"
+            ],
+            "failure": "Fix any of the following:\n  Element has insufficient color contrast of 2.96 (foreground color: #b48e27, background color: #fcfbf8, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "selectors": [
+              "a[aria-current=\"page\"]"
+            ],
+            "failure": "Fix any of the following:\n  Element has insufficient color contrast of 2.62 (foreground color: #b48e27, background color: #f1ede4, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "selectors": [
+              ".submit"
+            ],
+            "failure": "Fix any of the following:\n  Element has insufficient color contrast of 3.07 (foreground color: #ffffff, background color: #b48e27, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "selectors": [
+              "article:nth-child(1) > .card-body > .tagline"
+            ],
+            "failure": "Fix any of the following:\n  Element has insufficient color contrast of 2.51 (foreground color: #c59d59, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "selectors": [
+              "article:nth-child(2) > .card-body > .tagline"
+            ],
+            "failure": "Fix any of the following:\n  Element has insufficient color contrast of 2.51 (foreground color: #c59d59, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "selectors": [
+              "article:nth-child(3) > .card-body > .tagline"
+            ],
+            "failure": "Fix any of the following:\n  Element has insufficient color contrast of 2.51 (foreground color: #c59d59, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "selectors": [
+              "article:nth-child(4) > .card-body > .tagline"
+            ],
+            "failure": "Fix any of the following:\n  Element has insufficient color contrast of 2.51 (foreground color: #c59d59, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "selectors": [
+              "article:nth-child(5) > .card-body > .tagline"
+            ],
+            "failure": "Fix any of the following:\n  Element has insufficient color contrast of 2.51 (foreground color: #c59d59, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "selectors": [
+              "article:nth-child(6) > .card-body > .tagline"
+            ],
+            "failure": "Fix any of the following:\n  Element has insufficient color contrast of 2.51 (foreground color: #c59d59, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "selectors": [
+              ".footer-bottom > span:nth-child(1)"
+            ],
+            "failure": "Fix any of the following:\n  Element has insufficient color contrast of 4.37 (foreground color: #8a938a, background color: #1c3122, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "selectors": [
+              ".footer-bottom > span:nth-child(2)"
+            ],
+            "failure": "Fix any of the following:\n  Element has insufficient color contrast of 4.37 (foreground color: #8a938a, background color: #1c3122, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  }
+}
