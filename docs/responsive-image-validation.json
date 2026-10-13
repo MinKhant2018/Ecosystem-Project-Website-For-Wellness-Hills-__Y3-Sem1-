@@ -1,0 +1,69 @@
+{
+  "observedAt": "2026-10-12T22:25:04.057Z",
+  "purpose": "Verify unused responsive-image candidate cancellation without suppressing genuine request failures.",
+  "method": {
+    "server": "Production preview",
+    "initialViewportWidth": 1280,
+    "finalViewportWidth": 1024,
+    "candidateDelayMs": 800,
+    "description": "Delay 400w image candidates while changing from three desktop columns to two tablet columns."
+  },
+  "requiredConditionsForExpectedCancellation": [
+    "The failure is exactly net::ERR_ABORTED for an image request.",
+    "The failed URL is one of the twelve known local partner-photo srcset URLs.",
+    "The same photo declares the failed candidate and a different selected candidate in its srcset.",
+    "The selected replacement is a known local photo source, complete, with positive natural dimensions.",
+    "The selected replacement successfully decoded and its recorded response status is 200."
+  ],
+  "observations": [
+    {
+      "cancelledCandidate": "/assets/earth-photo-small.webp",
+      "error": "net::ERR_ABORTED",
+      "decodedReplacement": "/assets/earth-photo.webp",
+      "responseStatus": 200,
+      "complete": true,
+      "positiveNaturalWidth": true
+    },
+    {
+      "cancelledCandidate": "/assets/insda-photo-small.webp",
+      "error": "net::ERR_ABORTED",
+      "decodedReplacement": "/assets/insda-photo.webp",
+      "responseStatus": 200,
+      "complete": true,
+      "positiveNaturalWidth": true
+    },
+    {
+      "cancelledCandidate": "/assets/origan-photo-small.webp",
+      "error": "net::ERR_ABORTED",
+      "decodedReplacement": "/assets/origan-photo.webp",
+      "responseStatus": 200,
+      "complete": true,
+      "positiveNaturalWidth": true
+    },
+    {
+      "cancelledCandidate": "/assets/shambhu-photo-small.webp",
+      "error": "net::ERR_ABORTED",
+      "decodedReplacement": "/assets/shambhu-photo.webp",
+      "responseStatus": 200,
+      "complete": true,
+      "positiveNaturalWidth": true
+    },
+    {
+      "cancelledCandidate": "/assets/calush-photo-small.webp",
+      "error": "net::ERR_ABORTED",
+      "decodedReplacement": "/assets/calush-photo.webp",
+      "responseStatus": 200,
+      "complete": true,
+      "positiveNaturalWidth": true
+    },
+    {
+      "cancelledCandidate": "/assets/hills-photo-small.webp",
+      "error": "net::ERR_ABORTED",
+      "decodedReplacement": "/assets/hills-photo.webp",
+      "responseStatus": 200,
+      "complete": true,
+      "positiveNaturalWidth": true
+    }
+  ],
+  "automatedRunSummary": "Each npm test run writes test-results/request-summary.json with every failed request, verified responsive replacement, and unexpected error. Requests that do not meet every required condition still fail the test."
+}

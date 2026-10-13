@@ -1,6 +1,22 @@
 {
-  "name": "wellness-hills-promotions", "private": true, "version": "1.0.0", "type": "module",
-  "scripts": {"dev": "vite --host 0.0.0.0", "build": "vite build", "preview": "vite preview --host 0.0.0.0", "test": "node scripts/smoke.mjs"},
-  "dependencies": {"@fontsource/open-sans": "^5.2.7", "react": "^19.2.0", "react-dom": "^19.2.0"},
-  "devDependencies": {"vite": "^7.3.1", "@playwright/test": "^1.58.2"}
+  "name": "wellness-hills-promotions",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "node scripts/smoke.mjs"
+  },
+  "dependencies": {
+    "@fontsource/open-sans": "^5.2.7",
+    "@fontsource/tinos": "^5.3.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "vite": "^7.3.1"
+  }
 }
